@@ -9,8 +9,12 @@
       <div class="col-12">
         <ul>
           <!--  TODO : the last part of the task (style above index 4) hasn't been done  -->
-          <ng-container *ngFor="let singleLog of logsArray; let i = index">
-            <li [class]="'bg-warning'+(i+4)">{{singleLog}}</li>
+          <ng-container
+            *ngFor="let singleLog of logsArray;">
+            <li
+              [ngStyle]="{backgroundColor: singleLog >= 5 ? 'cyan' : 'transparent'}"
+              [ngClass]="{'text-danger': singleLog >= 5}"
+            >{{singleLog}}</li>
           </ng-container>
         </ul>
       </div>

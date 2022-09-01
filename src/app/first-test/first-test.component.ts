@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class FirstTestComponent implements OnInit {
   displayDetails: boolean = true;
   logEvent: number = 0;
-  logsArray: number[] = [];
+  logsArray: number[] = []; // array of numbers
   constructor() { }
 
   ngOnInit(): void {
