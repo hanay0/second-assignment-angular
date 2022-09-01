@@ -1,0 +1,19 @@
+<section class="my-4">
+  <div class="container">
+    <div class="row">
+      <div class="h1">Second Assignment for Directives </div>
+      <div class="col-12">
+          <button class="btn btn-primary" (click)="toggleDetails(); logClick()">Display Details</button>
+          <p [ngClass]="displayDetails ? '' : 'invisible'" >the password is : <span class="text-danger fw-bold">' test '</span></p>
+      </div>
+      <div class="col-12">
+        <ul>
+          <!--  TODO : the last part of the task (style above index 4) hasn't been done  -->
+          <ng-container *ngFor="let singleLog of logsArray; let i = index">
+            <li [class]="'bg-warning'+(i+4)">{{singleLog}}</li>
+          </ng-container>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
